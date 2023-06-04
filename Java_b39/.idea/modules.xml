@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../sandbox/src/main/java/ru/stqa/pft/Dz2/Dz2.iml" filepath="$PROJECT_DIR$/../sandbox/src/main/java/ru/stqa/pft/Dz2/Dz2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java_b39.iml" filepath="$PROJECT_DIR$/Java_b39.iml" />
     </modules>
   </component>
