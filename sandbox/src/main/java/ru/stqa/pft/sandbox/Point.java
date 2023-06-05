@@ -1,4 +1,4 @@
-package ru.stqa.pft.dz2;
+package ru.stqa.pft.sandbox;
 
 public class Point {
     public double A1, A2, B1, B2;

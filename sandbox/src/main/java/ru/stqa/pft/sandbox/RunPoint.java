@@ -1,4 +1,6 @@
-package ru.stqa.pft.dz2;
+package ru.stqa.pft.sandbox;
+
+import ru.stqa.pft.sandbox.Point;
 
 public class RunPoint {
     public static void main(String[] args) {

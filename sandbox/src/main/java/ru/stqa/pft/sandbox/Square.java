@@ -6,7 +6,7 @@ public class Square {
 
         this.l = l;
     }
-    public double Kvadrat() {
+    public double Square() {
         return this.l * this.l;
     }
 }

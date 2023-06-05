@@ -8,7 +8,7 @@ public class MyFirstProgram {
 
         Square s = new Square(5);
 
-        System.out.println("Площадь квадрата со стороной " + s.l + " = " + s.Kvadrat());
+        System.out.println("Площадь квадрата со стороной " + s.l + " = " + s.Square());
 
         Rectangle r = new Rectangle(5, 10);
 

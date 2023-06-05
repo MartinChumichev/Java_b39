@@ -1,9 +1,13 @@
 package ru.stqa.pft.sandbox;
 
-import org.testng
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+@Test
 public class SquareTests {
-    public void testArea () {
+    public void testSquare() {
         Square s = new Square(5);
-        assert s.Kvadrat() == 25;
+        Assert.assertEquals(s.Square(), 25);
+
     }
 }
