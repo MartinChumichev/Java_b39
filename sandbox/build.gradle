@@ -3,7 +3,9 @@ apply plugin: 'application'
 mainClassName = "MyFirstProgram"
 mainClassName = "RunPoint"
 
-dependencies {
-    testImplementation 'org.testng:testng:7.1.0'
+repositories {
+    mavenCentral()
 }
- 
+dependencies {
+       testImplementation 'org.testng:testng:7.1.0'
+}
