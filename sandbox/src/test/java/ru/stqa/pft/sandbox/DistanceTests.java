@@ -8,7 +8,7 @@ public class DistanceTests {
     // Релевантные значения координат
     public void testPoint() {
         Point p = new Point(2, 3, 4, 5);
-        Assert.assertEquals(p.distance(), 1.4142135623730951);
+        Assert.assertEquals(p.distance(), 2.8284271247461903);
     }
 
     // Одинаковые координаты точек
@@ -20,6 +20,6 @@ public class DistanceTests {
     // Дробные координаты
     public void testFraction() {
         Point p = new Point(1.2,7,7.9,11.2);
-        Assert.assertEquals(p.distance(), 6.673080248281148);
+        Assert.assertEquals(p.distance(), 7.907591289387685);
     }
 }

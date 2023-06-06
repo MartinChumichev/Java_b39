@@ -1,9 +1,9 @@
 package ru.stqa.pft.sandbox;
 
 public class Point {
-    public double A1, A2, B1, B2;
+    public double A1, B1, A2, B2;
 
-    public Point(double A1, double A2, double B1, double B2) {
+    public Point(double A1, double B1, double A2, double B2) {
         this.A1 = A1;
         this.A2 = A2;
         this.B1 = B1;
