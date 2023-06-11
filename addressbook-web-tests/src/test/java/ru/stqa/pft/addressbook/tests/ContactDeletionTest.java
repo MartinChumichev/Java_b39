@@ -5,12 +5,11 @@ import org.testng.annotations.Test;
 public class ContactDeletionTest extends TestBase {
 
     @Test
-    public void testContactDeletion() throws Exception {
-        app.returnToHomePage();
-        app.selectGroup();
-        app.deleteSelectedContacts();
-        app.returnToHomePage();
-        app.logout();
+    public void testContactDeletion() {
+        app.getNavigationHelper().returnToHomePage();
+        app.getGroupHelper().selectGroup();
+        app.getContactHelper().deleteSelectedContacts();
+        app.getNavigationHelper().returnToHomePage();
     }
 
 
