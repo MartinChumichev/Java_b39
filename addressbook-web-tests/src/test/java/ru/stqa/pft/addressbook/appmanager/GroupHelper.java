@@ -9,7 +9,12 @@ public class GroupHelper extends BaseHelper {
     public GroupHelper(WebDriver wd) {
         super(wd);
     }
-
+    public void editGroupForm(){
+        click(By.name("edit"));
+    }
+    public void updateGroupForm(){
+        click(By.name("update"));
+    }
     public void returnToGroupPage() {
         click(By.linkText("group page"));
     }

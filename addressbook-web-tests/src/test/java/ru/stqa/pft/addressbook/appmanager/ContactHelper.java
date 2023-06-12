@@ -14,6 +14,14 @@ public class ContactHelper extends BaseHelper {
         super(wd);
     }
 
+    public void editContactForm() {
+        click(By.xpath("//img[@alt='Edit']"));
+    }
+
+    public void updateContactForm() {
+        click(By.name("update"));
+    }
+
     public void submitContactCreation() {
         click(By.xpath("//div[@id='content']/form/input[21]"));
     }
