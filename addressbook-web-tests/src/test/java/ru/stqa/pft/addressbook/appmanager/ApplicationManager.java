@@ -30,7 +30,7 @@ public class ApplicationManager {
             wd = new InternetExplorerDriver();
         }
 
-        wd.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        wd.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
         groupHelper = new GroupHelper(wd);
         navigationHelper = new NavigationHelper(wd);
         contactHelper = new ContactHelper(wd);

@@ -18,7 +18,6 @@ public class NavigationHelper extends BaseHelper {
 
     public void gotoAddNewContactPage() {
         click(By.linkText("add new"));
-
     }
 
     public void login(String username, String password) {
