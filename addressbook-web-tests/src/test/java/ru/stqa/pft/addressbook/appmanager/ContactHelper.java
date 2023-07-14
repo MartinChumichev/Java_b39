@@ -3,9 +3,13 @@ package ru.stqa.pft.addressbook.appmanager;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.stqa.pft.addressbook.model.ContactData;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.testng.Assert.assertTrue;
 
@@ -16,12 +20,14 @@ public class ContactHelper extends BaseHelper {
         super(wd);
     }
 
-    public void editContactForm() {
-        click(By.xpath("//img[@alt='Edit']"));
+    public void editContactForm(int index) {
+        wd.findElements(By.xpath("//img[@alt='Edit']")).get(index).click();
+
     }
 
-    public void selectContact() {
-        click(By.name("selected[]"));
+    public void selectContact(int index) {
+        wd.findElements(By.name("selected[]")).get(index).click();
+
     }
 
     public void updateContactForm() {
@@ -93,5 +99,22 @@ public class ContactHelper extends BaseHelper {
 
     public boolean isThereAContact() {
         return isElementPresent(By.name("selected[]"));
+    }
+
+    public int getContactCount() {
+       return wd.findElements(By.name("selected[]")).size();
+    }
+
+    public List<ContactData> getContactList() {
+        List<ContactData> contacts = new ArrayList<ContactData>();
+        List<WebElement> elements = wd.findElements(By.name("entry"));
+        for (WebElement element : elements) {
+            String name = element.getText();
+            ContactData contact = new ContactData(name, "Obama", "Molodec", "Washington", "BO2023",
+                    "WhiteHome", "15-15-15", "+30-985-258-99-66",
+                    "Mr_President@WhiteHouse.com", "USA", null );
+            contacts.add(contact);
+        }
+        return contacts;
     }
 }
