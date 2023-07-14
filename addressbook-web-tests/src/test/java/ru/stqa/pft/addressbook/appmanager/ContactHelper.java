@@ -41,7 +41,7 @@ public class ContactHelper extends BaseHelper {
 
     public void fillContactForm(ContactData contactData, boolean creation) {
         type(By.name("firstname"), contactData.getFirstname());
-        type(By.name("middlename"), contactData.getMiddlename());
+
         type(By.name("lastname"), contactData.getLastname());
         type(By.name("address"), contactData.getAddress());
         type(By.name("nickname"), contactData.getNickname());
@@ -102,17 +102,19 @@ public class ContactHelper extends BaseHelper {
     }
 
     public int getContactCount() {
-       return wd.findElements(By.name("selected[]")).size();
+        return wd.findElements(By.name("selected[]")).size();
     }
 
     public List<ContactData> getContactList() {
-        List<ContactData> contacts = new ArrayList<ContactData>();
-        List<WebElement> elements = wd.findElements(By.name("entry"));
+        List<ContactData> contacts = new ArrayList<>();
+        List<WebElement> elements = wd.findElements(By.xpath("//table[@id='maintable']/tbody/tr[position() > 1]"));
         for (WebElement element : elements) {
-            String name = element.getText();
-            ContactData contact = new ContactData(name, "Obama", "Molodec", "Washington", "BO2023",
+            String firstname = element.findElement(By.xpath("./td[3]")).getText();
+            String lastname = element.findElement(By.xpath("./td[2]")).getText();
+            int id = Integer.parseInt(element.findElement(By.xpath("./td[1]/input")).getAttribute("value"));
+            ContactData contact = new ContactData(id, firstname, lastname, "Washington", "BO2023",
                     "WhiteHome", "15-15-15", "+30-985-258-99-66",
-                    "Mr_President@WhiteHouse.com", "USA", null );
+                    "Mr_President@WhiteHouse.com", "USA", null);
             contacts.add(contact);
         }
         return contacts;
