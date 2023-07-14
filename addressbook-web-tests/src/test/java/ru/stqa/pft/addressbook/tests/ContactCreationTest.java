@@ -9,6 +9,6 @@ public class ContactCreationTest extends TestBase {
     public void testContactCreation() {
         app.getContactHelper().createContact(new ContactData("Barak", "Obama", "Molodec", "Washington", "BO2023",
                 "WhiteHome", "15-15-15", "+30-985-258-99-66",
-                "Mr_President@WhiteHouse.com", "USA", "test1"));
+                "Mr_President@WhiteHouse.com", "USA", null));
     }
 }

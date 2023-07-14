@@ -85,7 +85,7 @@ public class ContactHelper extends BaseHelper {
 
     public void createContact(ContactData contact) {
         goToAddNewContactPage();
-        fillContactForm(contact, true);
+        fillContactForm(contact, false);
         submitContactCreation();
         returnToContactPage();
 
